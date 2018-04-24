@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 
 def getTextFromUrl(url, index):
-    if index > 0 and index < 7:
+    if 0 < index < 7:
         return getText1_6(url)
     elif index == 7:
         return getText7(url)
@@ -40,9 +40,9 @@ def getText7(url):
     ps = re.findall(pattern, text_)
     text = ''
     if len(ps) != 0:
-        #判断有几段p，不为零就记录
+        # 判断有几段p，不为零就记录
         for p in ps:
-            #删除p中所有的<.*?>
+            # 删除p中所有的<.*?>
             enPattern = re.compile(r'<.*?>')
             ens = re.findall(enPattern, p)
             if len(ens) > 0:
