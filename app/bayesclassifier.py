@@ -5,7 +5,7 @@ import os, sys
 import math
 import jieba
 
-# import parseurl
+import parseurl
 
 ABSPATH = os.path.abspath(sys.argv[0])
 ABSPATH = ABSPATH[:-20]
