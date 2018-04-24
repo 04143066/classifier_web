@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>财经</title>
+
+    <link href="{% static 'dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="{% static 'dist/css/bootstrap-theme.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/ticket.css' %}" rel="stylesheet">
+    <link href="{% static 'css/footer.css' %}" rel="stylesheet">
+
+</head>
+
+<body role="document" data-spy="scroll">
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top navbar-static " id="navbar-example" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">贝叶斯分类器</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#menu1">财经 </a></li>
+                <li><a href="#menu2">科技</a></li>
+                <li><a href="#menu3">汽车</a></li>
+                <li><a href="#menu3">房产</a></li>
+                <li><a href="#menu3">体育</a></li>
+                <li><a href="#menu3">娱乐</a></li>
+                <li><a href="#menu3">其他</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              {% comment %}  <li><a href="./personal.html">个人中心</a></li>{% endcomment %}
+                <li><a href="./about.html">关于</a></li>
+                <li><a href="javascript:void(0);" onclick="message()">帮助</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container theme-showcase" data-target="#navbar-example" role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <h2>财经</h2>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called a
+            jumbotron and three supporting pieces of content. Use it as a starting point to create something more
+            unique.</p>
+        <p><a href="#" class="btn btn-primary btn-lg" role="button">上传文本 &raquo;</a></p>
+    </div>
+
+    <div class="current">
+        <h2 id="menu1" class="active text-danger">词频统计</h2>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="img-thumbnail">
+                    <div>
+                        <img src="../images/c3.jpg" alt="" id="t1">
+                        <p class="saleText"><a href="./saleTicket.html" class="text-danger">购票</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="img-thumbnail">
+
+                    <img src="../images/c3.jpg" alt="">
+                    <p class="saleText"><a href="#" class="text-danger">购票</a></p>
+
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="img-thumbnail">
+
+                    <img src="../images/c3.jpg" alt="">
+                    <p class="saleText"><a href="#" class="text-danger">购票</a></p>
+
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="img-thumbnail">
+
+                    <img src="../images/c3.jpg" alt="">
+                    <p class="saleText"><a href="#" class="text-danger">购票</a></p>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="img-thumbnail">
+
+                    <img src="../images/c3.jpg" alt="">
+                    <p class="saleText"><a href="#" class="text-danger">购票</a></p>
+
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="img-thumbnail">
+
+                    <img src="../images/c3.jpg" alt="">
+                    <p class="saleText"><a href="#" class="text-danger">购票</a></p>
+
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="img-thumbnail">
+
+                    <img src="../images/c3.jpg" alt="">
+                    <p class="saleText"><a href="#" class="text-danger">购票</a></p>
+
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="img-thumbnail">
+
+                    <img src="../images/c3.jpg" alt="">
+                    <p class="saleText"><a href="#" class="text-danger">购票</a></p>
+
+                </div>
+            </div>
+        </div>
+        <h2 id="menu2" class="text-danger">即将上映</h2>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="img-thumbnail">
+
+                    <img src="../images/c3.jpg" alt="">
+                    <p class="saleText"><a href="#" class="text-danger">购票</a></p>
+
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="img-thumbnail">
+
+                    <img src="../images/c3.jpg" alt="">
+                    <p class="saleText"><a href="#" class="text-danger">购票</a></p>
+
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="img-thumbnail">
+
+                    <img src="../images/c3.jpg" alt="">
+                    <p class="saleText"><a href="#" class="text-danger">购票</a></p>
+
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="img-thumbnail">
+
+                    <img src="../images/c3.jpg" alt="">
+                    <p class="saleText"><a href="#" class="text-danger">购票</a></p>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="img-thumbnail">
+
+                    <img src="../images/c3.jpg" alt="">
+                    <p class="saleText"><a href="#" class="text-danger">购票</a></p>
+
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="img-thumbnail">
+
+                    <img src="../images/c3.jpg" alt="">
+                    <p class="saleText"><a href="#" class="text-danger">购票</a></p>
+
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="img-thumbnail">
+
+                    <img src="../images/c3.jpg" alt="">
+                    <p class="saleText"><a href="#" class="text-danger">购票</a></p>
+
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="img-thumbnail">
+
+                    <img src="../images/c3.jpg" alt="">
+                    <p class="saleText"><a href="#" class="text-danger">购票</a></p>
+
+                </div>
+            </div>
+        </div>
+        <div></div>
+        <div class="row">
+
+            <div class="col-lg-6">
+                <h2 id="menu3" class="text-danger">今日票房</h2>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-3">ww</div>
+                <div class="col-lg-2">ww</div>
+            </div>
+            <div class="col-lg-6">
+                <h2 id="menu4" class="text-danger">今日热议</h2>
+                <ul>
+                    <li>dd</li>
+                    <li>dd</li>
+                    <li>dd</li>
+                    <li>dd</li>
+                </ul>
+            </div>
+        </div>
+    </div> <!-- /container -->
+
+</div>
+<footer class="footer">
+ {% comment %}   <p>@2016 永乐票务 yongle.com 京ICP证160733号 京ICP备16022489号-1 京公网安备 11010502030881号 网络文化经营许可证 电子公告服务规则</p>
+    <p>北京永乐文化传媒有限公司</p>{% endcomment %}
+</footer>
+<script src="{% static 'dist/jquery-3.1.1.min.js' %}"></script>
+<script src="{% static 'dist/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'dist/js/ie10-viewport-bug-workaround.js' %}"></script>
+</body>
+</html>

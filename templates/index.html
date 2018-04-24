@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static 'images/5.jpg' %}">
+
+    <title>贝叶斯新闻分类</title>
+    <link href="{% static 'dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/index.css' %}" rel="stylesheet">
+    <script>
+        function message() {
+            alert("系统出现问题请致电：47383-439");
+        }
+    </script>
+</head>
+
+<body>
+
+<div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <h3 class="masthead-brand">贝叶斯新闻分类器</h3>
+                    <nav>
+                        <ul class="nav masthead-nav">
+                            <li class="active"><a href="#">首页</a></li>
+                            <li><a href="javascript:void(0);" onclick="message()">帮助</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="inner cover">
+                <h1 class="cover-heading">BayesClassifier</h1>
+                <p class="lead">Machine Learning (ML) is a multidisciplinary
+                    interdisciplinary subject, involvingprobability theory,
+                    statistics, approximation theory, convex analysis, algorithm
+                    complexity theory and so on.</p>
+                <p class="lead">
+                    <a href="{% url 'home' %}" class="btn btn-lg btn-default">进入</a>
+                </p>
+            </div>
+
+            <div class="mastfoot">
+                <div class="inner">
+                    {% comment %}<p>ALLICE提供技术支持@Allice Team</p>{% endcomment %}
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="{% static 'dist/jquery-3.1.1.min.js' %}"></script>
+<script src="{% static 'dist/js/bootstrap.min.js' %}"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="{% static 'dist/js/ie10-viewport-bug-workaround.js' %}"></script>
+</body>
+</html>

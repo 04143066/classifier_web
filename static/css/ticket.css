@@ -1,0 +1,35 @@
+body {
+    padding-top: 70px;
+    padding-bottom: 30px;
+    /*height: 800px;*/
+}
+
+.theme-dropdown .dropdown-menu {
+    position: static;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+    margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+    width: auto;
+}
+
+.theme-showcase {
+    overflow: auto;
+    position: relative;
+}
+
+.saleText {
+    margin-top: 10px;
+    margin-bottom: -5px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.row {
+    margin-bottom: 30px;
+}
