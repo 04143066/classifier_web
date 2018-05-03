@@ -33,3 +33,13 @@ body {
 .row {
     margin-bottom: 30px;
 }
+
+.current p {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.world {
+    margin: 0px -80px 0px 0px
+}

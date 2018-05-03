@@ -44,7 +44,7 @@
                 <li style="font-size: 130%"><a href="{% url 'home' 7 %}">其他</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li style="font-size: 130%"><a href="{% url 'upload' %}">上传文本</a></li>
+                <li style="font-size: 130%"><a href="{% url 'upload' %}">在线分类</a></li>
                 <li style="font-size: 130%"><a href="javascript:void(0);" onclick="message()">帮助</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -55,27 +55,22 @@
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron" style="margin-top: 5% ;padding-bottom: 2%">
-        <h2 style="margin-top: -10px">{{ type }}新闻训练结果</h2>
+        <p><a href="#" class="btn btn-primary btn-lg" role="button">上传文本 &raquo;</a></p>
     </div>
 
     <div class="current">
         <h2 class="active text-danger">分词结果</h2>
-        <p>
-            {% for world in worlds_li %}
-                <span class="col-sm-2">{{ world }}</span>
-            {% endfor %}
-        </p><br><br>
+
     </div>
 </div>
 <div class="current container theme-showcase" data-target="#navbar-example" role="main">
     <h2 class="active text-danger">词频统计</h2>
     <p>
-        {% for world in world_list %}
-            <span class="col-sm-3">{{ world }}</span>
-        {% endfor %}
+
     </p><br><br>
 </div>
-<br><br>
+
+
 <footer class="footer">
     <p>2018 西安邮电大学&nbsp;&nbsp;&nbsp;
         计算机学院&nbsp;&nbsp;&nbsp;
