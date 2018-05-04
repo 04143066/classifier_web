@@ -43,3 +43,9 @@ body {
 .world {
     margin: 0px -80px 0px 0px
 }
+
+.cont {
+    width: 85%;
+    height:400px;
+    padding-left: 10%;
+}

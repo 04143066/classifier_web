@@ -1,9 +1,8 @@
 # coding:utf-8
 import os
+import json
 from django.shortcuts import render
 from django.http import HttpResponse
-
-# Create your views here.
 
 
 def hello(request):
@@ -53,4 +52,17 @@ def home(request, a):
             world_list.append(training_word_p_list[i])
         else:
             break
-    return render(request, 'home.html', {'worlds_li': worlds_li, 'world_list': world_list, 'type': type})
+    return render(request, 'home.html', {'worlds_li': worlds_li, 'world_list': world_list, 'type': type, 'a': a})
+
+
+def highchart(request, a):
+    index_training_path = "E:\\ideaWorkplace\\classifier_web\\bayes_training_outcome\\"+str(a)+"_bayestraining_new.txt"
+    file_index_training = open(index_training_path, 'r')
+    training_word_p_list = file_index_training.readlines()
+    worlds_li = []
+    for i in xrange(1, len(training_word_p_list)):
+        word_p = training_word_p_list[i].strip().split(',')
+        word_p[0] = int(word_p[0])
+        word_p[1] = float(word_p[1])
+        worlds_li.append(word_p)
+    return HttpResponse(json.dumps(worlds_li), content_type='application/json')

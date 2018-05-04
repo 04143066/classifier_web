@@ -4,8 +4,8 @@
 import jieba, os, sys
 
 ABSPATH = os.path.abspath(sys.argv[0])
-ABSPATH = ABSPATH[:-10]
-ABSPATH = os.path.dirname(ABSPATH) + '/'
+ABSPATH = ABSPATH[:-20]
+ABSPATH = os.path.dirname(ABSPATH) + '\\'
 print ABSPATH
 
 word_num_pre_list = []      #每类新闻样本的总词数和词的类别数
@@ -18,7 +18,7 @@ def getWordDic(index):
     for i in xrange(100, 1000):
         #获得类index的wordDic
         #得到语料中的样本文档
-        file_path = ABSPATH + 'data/training/' + str(index) + '_' + str(i) + '.txt'
+        file_path = ABSPATH + 'data\\training\\' + str(index) + '_' + str(i) + '.txt'
         if (i % 50) == 0:
             print file_path
 

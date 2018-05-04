@@ -16,7 +16,6 @@
     <link href="{% static 'css/footer.css' %}" rel="stylesheet">
 
 </head>
-
 <body role="document" data-spy="scroll">
 
 <!-- Fixed navbar -->
@@ -67,8 +66,10 @@
         </p><br><br>
     </div>
 </div>
+<br>
+<div id="container" class="cont"></div>
 <div class="current container theme-showcase" data-target="#navbar-example" role="main">
-    <h2 class="active text-danger">词频统计</h2>
+    <h2 class="active text-danger">词频统计</h2><span id = "a">{{ a }}</span>
     <p>
         {% for world in world_list %}
             <span class="col-sm-3">{{ world }}</span>
@@ -83,8 +84,14 @@
         邹雄鑫&nbsp;&nbsp;&nbsp;毕业设计</p>
     <p>基于贝叶斯和python的应用系统开发</p>
 </footer>
+
 <script src="{% static 'dist/jquery-3.1.1.min.js' %}"></script>
 <script src="{% static 'dist/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/exporting.js' %}"></script>
+<script src="{% static 'js/highcharts.js' %}"></script>
+<script src="{% static 'js/oldie.js' %}"></script>
+<script src="{% static 'js/annotations.js' %}"></script>
 <script src="{% static 'dist/js/ie10-viewport-bug-workaround.js' %}"></script>
+<script src="{% static 'js/worldCount.js' %}"></script>
 </body>
 </html>
