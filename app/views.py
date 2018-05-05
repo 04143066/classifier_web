@@ -2,8 +2,11 @@
 import os
 import json
 import classifier
+from pyspark import SparkContext, SparkConf
 from django.shortcuts import render
 from django.http import HttpResponse
+
+sc = SparkContext("local", "myApp")
 
 
 def hello(request):
@@ -81,6 +84,12 @@ def uploadfile(request):
         file_analyse = open("E:\\"+myFile.name, 'r')
         content = file_analyse.read()
         cutword_list = classifier.handle_text(content)
+        text_file = sc.parallelize(cutword_list)
+        counts = text_file.flatMap(lambda line: line.split(" ")).map(lambda word: (word, 1)).reduceByKey(lambda a, b: a + b)
+        as_map = counts.collect()
+        count_list = []
+        for i in as_map:
+            count_list.append(str(i[0])+","+str(i[1]))
         a = classifier.bayes(content)
         if int(a) == 1:
             type = "财经"
@@ -103,4 +112,4 @@ def uploadfile(request):
             word = word.strip()
             if word in dic_training:
                 p_list.append(word+","+str(dic_training[word]))
-        return render(request, 'upload.html', {'content': content, 'cutword_list': cutword_list, 'p_list': p_list, 'type': type})
+        return render(request, 'upload.html', {'content': content, 'cutword_list': count_list, 'p_list': p_list, 'type': type})
