@@ -73,7 +73,7 @@
             {% endfor %}
         </p><br><br>
     </div>
-</div><br>
+</div>
 <div class="current container theme-showcase" data-target="#navbar-example" role="main">
     <h2 class="active text-danger">词频统计</h2>
     <p>
@@ -84,7 +84,10 @@
 </div><br>
 <div class="current container theme-showcase">
     <h2 class="active text-danger">分析结果</h2><br>
-    <h1 style="font-size: 500%; margin-left: 34%" class="btn btn-primary btn-lg">{{ type }}新闻</h1><br><br><br><br><br>
+    {% if type %}
+        <h1 style="font-size: 500%; margin-left: 34%" class="btn btn-primary btn-lg">{{ type }}新闻</h1><br><br><br>
+    {% endif %}
+    <br><br>
 </div>
 
 
