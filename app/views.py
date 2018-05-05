@@ -1,6 +1,7 @@
 # coding:utf-8
 import os
 import json
+import classifier
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -79,4 +80,20 @@ def uploadfile(request):
         destination.close()
         file_analyse = open("E:\\"+myFile.name, 'r')
         content = file_analyse.read()
-        return render(request, 'upload.html', {'content': content})
+        cutword_list = classifier.handle_text(content)
+        a = classifier.bayes(content)
+        if int(a) == 1:
+            type = "财经"
+        elif int(a) == 2:
+            type = "科技"
+        elif int(a) == 3:
+            type = "汽车"
+        elif int(a) == 4:
+            type = "房产"
+        elif int(a) == 5:
+            type = "体育"
+        elif int(a) == 6:
+            type = "娱乐"
+        elif int(a) == 7:
+            type = "其他"
+        return render(request, 'upload.html', {'content': content, 'cutword_list': cutword_list, 'type': type})

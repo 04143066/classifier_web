@@ -67,7 +67,11 @@
 
     <div class="current">
         <h2 class="active text-danger">分词结果</h2>
-
+        <p>
+            {% for world in cutword_list %}
+                <span class="col-sm-2">{{ world }}</span>
+            {% endfor %}
+        </p><br><br>
     </div>
 </div>
 <div class="current container theme-showcase" data-target="#navbar-example" role="main">
@@ -75,6 +79,8 @@
     <p>
 
     </p><br><br>
+    <h2 class="active text-danger">分析结果</h2><br>
+    <h1 style="font-size: 500%; margin-left: 34%" class="btn btn-primary btn-lg">{{ type }}新闻</h1><br><br><br><br><br>
 </div>
 
 
