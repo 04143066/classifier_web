@@ -9,7 +9,7 @@ ABSPATH = os.path.dirname(ABSPATH) + '/'
 print ABSPATH
 
 
-def getPofClass(index, word_list):
+def getWordDic(index):
     # 输入类index的贝叶斯训练结果文件
     index_training_path = ABSPATH + 'bayes_training_outcome/' + str(index) + '_bayestraining.txt'
     file_index_training = open(index_training_path, 'r')
@@ -21,7 +21,10 @@ def getPofClass(index, word_list):
     for i in xrange(1, len(training_word_p_list)):
         word_p = training_word_p_list[i].strip().split(',')
         dic_training[word_p[0]] = float(word_p[1])
+    return dic_training, allwords_fre, allwords_num
 
+
+def getPofClass(dic_training, allwords_fre, allwords_num, word_list):
     # 遍历测试样本的wordlist，求每个Word的p
     p_list = []
     for word in word_list:
@@ -72,6 +75,7 @@ def handle_text(text):
             word_list_nostop.append(word)
     return word_list_nostop
 
+
 # 贝叶斯算法核心
 def bayes(text):
     word_list_nostop = handle_text(text)
@@ -79,7 +83,8 @@ def bayes(text):
     max = 0
     maxIndex = 0
     for index in xrange(1, 8):
-        y = getPofClass(index, word_list_nostop)
+        [dic_training, allwords_fre, allwords_num] = getWordDic(index)
+        y = getPofClass(dic_training, allwords_fre, allwords_num, word_list_nostop)
         # print str(index) + ':' + str(y)
         if y != float("inf") and y > max:
             max = y

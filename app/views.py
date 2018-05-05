@@ -96,4 +96,11 @@ def uploadfile(request):
             type = "娱乐"
         elif int(a) == 7:
             type = "其他"
-        return render(request, 'upload.html', {'content': content, 'cutword_list': cutword_list, 'type': type})
+        [dic_training, allwords_fre, allwords_num] = classifier.getWordDic(int(a))
+        p_list = []
+        dis_cutword_list = list(set(cutword_list))
+        for word in dis_cutword_list:
+            word = word.strip()
+            if word in dic_training:
+                p_list.append(word+","+str(dic_training[word]))
+        return render(request, 'upload.html', {'content': content, 'cutword_list': cutword_list, 'p_list': p_list, 'type': type})
