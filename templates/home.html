@@ -29,8 +29,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+            <a class="navbar-brand" style="font-size: 200%" href="{% url 'index' %}">贝叶斯分类器</a>
         </div>
-        <a class="navbar-brand" style="font-size: 200%" href="{% url 'index' %}">贝叶斯分类器</a>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
@@ -69,7 +69,7 @@
 <br>
 <div id="container" class="cont"></div>
 <div class="current container theme-showcase" data-target="#navbar-example" role="main">
-    <h2 class="active text-danger">词频统计</h2><span id = "a">{{ a }}</span>
+    <h2 class="active text-danger row">词频统计</h2><span id = "a">{{ a }}</span>
     <p>
         {% for world in world_list %}
             <span class="col-sm-3">{{ world }}</span>
