@@ -69,7 +69,7 @@
         <h2 class="active text-danger">分词结果</h2>
         <p>
             {% for world in cutword_list %}
-                <span class="col-sm-2">{{ world }}</span>
+                <span class="col-sm-2 col-xs-4">{{ world }}</span>
             {% endfor %}
         </p><br><br>
     </div>
@@ -78,7 +78,7 @@
     <h2 class="active text-danger">词频统计</h2>
     <p>
         {% for pworld in p_list %}
-            <span class="col-sm-3">{{ pworld }}</span>
+            <span class="col-sm-3  col-xs-12">{{ pworld }}</span>
         {% endfor %}
     </p>
 </div><br>

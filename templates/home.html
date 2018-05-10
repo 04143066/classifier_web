@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>财经</title>
-
+    <link rel="icon" href="{% static 'images/5.jpg' %}">
     <link href="{% static 'dist/css/bootstrap.min.css' %}" rel="stylesheet">
     <!-- Bootstrap theme -->
     <link href="{% static 'dist/css/bootstrap-theme.min.css' %}" rel="stylesheet">
@@ -66,7 +66,7 @@
         <h2 class="active text-danger">分词结果</h2>
         <p>
             {% for world in worlds_li %}
-                <span class="col-sm-2">{{ world }}</span>
+                <span class="col-sm-2  col-xs-4">{{ world }}</span>
             {% endfor %}
         </p><br><br>
     </div>
@@ -77,7 +77,7 @@
     <h2 class="active text-danger row">词频统计</h2><span id = "a">{{ a }}</span>
     <p>
         {% for world in world_list %}
-            <span class="col-sm-3">{{ world }}</span>
+            <span class="col-sm-3 col-xs-12">{{ world }}</span>
         {% endfor %}
     </p><br><br>
 </div>
